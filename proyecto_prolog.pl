@@ -30,9 +30,10 @@ fallas('Se recomienda un formateo: Debe de reinstalar por completo el sistema op
 	así se eliminarán los archivos que se acumulan con el tiempo, se desfragmenta el disco
 	duro y funcionará de una mejor manera'):-lento,!.
 
-fallas('realizar una alineacion y balanceo:
-        la solucion para esto es llavar el auto a un taller
-        para que alinien y balancen las llantas del auto'):-suspension,!.
+fallas('Se recomienda checar tus ventiladores:
+        Debes dasarmar tu computadora y darle algo de mantenimiento, en este caso es 
+	limpiar tus ventiladores ya que el polvo no deja que estos hagan biensu trabajo, 
+	pero si aun sigue el problema lo mejor sera cambiar de ventiladores por otros'):-sobrecalentamiento,!.
 
 fallas('verificar el estado actual de la bateria:
 	primero abra el cofre y ubique la bateria del coche
@@ -79,10 +80,10 @@ lento:- formateo,
 	pregunta('Se siente lenta en general? ').
 
 sobrecalentamiento:- cambio_ventilador,
-	pregunta('tienes problemas de la suspencion?'),
-	pregunta('tiene su volante neutral y el auto gira?'),
-	pregunta('ha notado que alguna llanta se desgasta mas? '),
-	pregunta('su volante se mueve bastante y tiembla?').
+	pregunta('Piensas que tu Pc se calienta demaciado?'),
+	pregunta('escuchas algun sonido raro (ventiladores?'),
+	pregunta('estan girando tus ventiladores?'),
+	pregunta('sientes que tus ventiladores estan sacando poco aire?').
 
 pantalla_azul:- actualizar_drivers,
 	pregunta('tienes problemas electricos?'),
