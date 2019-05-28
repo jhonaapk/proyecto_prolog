@@ -2,7 +2,7 @@
 
 :-use_module(library(pce)).
 :-use_module(library(pce_style_item)).
-%hola!!!!
+
 % metodo principal para iniciar la interfaz grafica, declaracion de
 % botones, labels, y la posicion en pantalla.
 inicio:-
