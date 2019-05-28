@@ -2,12 +2,12 @@
 
 :-use_module(library(pce)).
 :-use_module(library(pce_style_item)).
-
+%hola!!!!
 % metodo principal para iniciar la interfaz grafica, declaracion de
 % botones, labels, y la posicion en pantalla.
 inicio:-
 	new(Menu, dialog('Sistema Experto de fallas en PC', size(900,800))),
-	new(L,label(nombre,'Software para predecir fallas tÈcnicas en computadoras')),
+	new(L,label(nombre,'Software para predecir fallas t√©cnicas en computadoras')),
 	new(A,label(nombre,'Santos Fierro 15540172\nJonahtan Ramirez 15551422\nIlse Baca 15551446\nJhonatan Villegas 15551409')),
 	new(@texto,label(nombre,'Responde este cuestionario para resolver tu falla')),
 	new(@respl,label(nombre,'')),
@@ -27,8 +27,8 @@ inicio:-
 %solucion a las fallas de acuerdo a las reglas de diagnostico
 
 fallas('Se recomienda un formateo: Debe de reinstalar por completo el sistema operativo,
-	asÌ se eliminar·n los archivos que se acumulan con el tiempo, se desfragmenta el disco
-	duro y funcionar· de una mejor manera'):-lento,!.
+	as√≠ se eliminar√°n los archivos que se acumulan con el tiempo, se desfragmenta el disco
+	duro y funcionar√° de una mejor manera'):-lento,!.
 
 fallas('realizar una alineacion y balanceo:
         la solucion para esto es llavar el auto a un taller
@@ -108,7 +108,7 @@ virus:- antivirus,
 
 %identificador de falla que dirige a las preguntas correspondientes
 
-formateo:-pregunta('est· lenta tu PC?'),!.
+formateo:-pregunta('est√° lenta tu PC?'),!.
 cambio_ventilador:-pregunta('Se calienta mucho?'),!.
 actualizar_drivers:-pregunta('Te aparece pantalla azul?'),!.
 limpieza:-pregunta('hace ruidos al iniciar?'),!.
@@ -121,7 +121,7 @@ antivirus:-pregunta('Te aparecen muchos accesos directos?'),!.
 % (motor,frenos,etc.)
 
 :-dynamic si/1,no/1.
-preguntar(Problema):- new(Di,dialog('DiagnÛstico de PC')),
+preguntar(Problema):- new(Di,dialog('Diagn√≥stico de PC')),
      new(L2,label(texto,'Responde las siguientes preguntas')),
      new(La,label(prob,Problema)),
      new(B1,button(si,and(message(Di,return,si)))),
